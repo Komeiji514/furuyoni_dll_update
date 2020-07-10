@@ -62,7 +62,7 @@ def download():
             #+"大小："+str(len(r.content))+"字节。"
             print("按回车键退出。")
             input()
-            return
+            break
         except:
             print("写入文件%s失败。"%save_path)
             print("请关闭对战器后重试，或常世以管理员身份启动该程序。")
@@ -75,6 +75,16 @@ def check():
         print("按回车键退出。")
         input()
         exit(0)
+    while(True):
+        try:
+            f = open(save_path,"rb+")
+            f.close()
+            break
+        except:
+            print("打开文件%s失败。"%save_path)
+            print("请关闭对战器后重试，或常世以管理员身份启动该程序。")
+            print("按回车键重试。")
+            input()
 
 if __name__ == '__main__':
     check()
