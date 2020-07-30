@@ -3,12 +3,13 @@ import requests
 import re
 import os
 import os.path
+from pathlib import Path
 
 # download_url="http://47.105.173.19/furuyonibattle/download/SakuraArms_200602.dll"
 download_url=""
 webpage_url="http://47.105.173.19/furuyonibattle/log.html"
 save_path="SakuraArms/SakuraArms.dll"
-check_path="SakuraArms/CardData"
+check_path="SakuraArms/"
 version=""
 
 def get_download_url():
